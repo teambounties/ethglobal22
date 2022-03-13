@@ -1,0 +1,26 @@
+html, body, pre, code, kbd, samp {
+  font-family: "Press Start 2P";
+}
+input {
+  width:100%;padding:10px;margin:4px 0px;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo{
+  position:relative;top:-15px;
+}
+
+.nes-badge{
+  font-size:8px;
+  line-height:10px;
+}
+.actions button { margin:0px 20px;}
