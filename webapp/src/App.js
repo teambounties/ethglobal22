@@ -6,7 +6,7 @@ import {Factory} from './FactoryAbi';
 // initialize notify
 const CHILD_ABI = Team.abi;
 const CONTRACT_ABI = Factory.abi;
-const CONTRACT_ADDRESS = '0x2317209c8D402F0Fca17316a6E1B9264CFDDbeb4';//Factory.networks["5777"].address;
+const CONTRACT_ADDRESS = process.env.REACT_APP_CONTRACT_ADDRESS || '0x60dd05235a9a889009d1623c796077230b2e36d2';//Factory.networks["5777"].address;
 const {ethereum } = window;
 
 function useInput({ type,label}) {
@@ -224,7 +224,7 @@ function App() {
   return (
     <div style={{margin:'100px'}}>
 		{modal && <div><progress class="nes-progress is-error" value="10" max="100"></progress><input type="button" class="nes-btn is-error" value={modal} /></div> }
-		
+		{!CONTRACT_ADDRESS && <div><progress class="nes-progress is-error" value="10" max="100"></progress>Local Demo mode</div> }		
 		<div>
 			<div style={{fontSize:'0.5em'}}><br></br>{time}</div>
 			<br></br>
