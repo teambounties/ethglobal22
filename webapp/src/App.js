@@ -6,7 +6,7 @@ import {Factory} from './FactoryAbi';
 // initialize notify
 const CHILD_ABI = Team.abi;
 const CONTRACT_ABI = Factory.abi;
-const CONTRACT_ADDRESS = Factory.networks["5777"].address;
+const CONTRACT_ADDRESS = '0x2317209c8D402F0Fca17316a6E1B9264CFDDbeb4';//Factory.networks["5777"].address;
 const {ethereum } = window;
 
 function useInput({ type,label}) {
@@ -167,7 +167,7 @@ function App() {
 
 			//todo create new provider to hit rpc server for demo.
 			//const ganache = new ethers.providers.Web3Provider('http://localhost:7545');
-			const ganache = new ethers.providers.JsonRpcProvider("http://localhost:7545");
+			/*const ganache = new ethers.providers.JsonRpcProvider("http://localhost:7545");
 			console.log('ethers.networks:', ethers.networks);
 
 			// Getting the accounts
@@ -182,7 +182,6 @@ function App() {
 				_testAccounts.push(accountExists.address);
 			}
 			//setTestAccounts(_testAccounts);
-
 			const accounts = [
 				ganache.getSigner(0).address,
 				'0xF2eFBce89828d1D573A5697a6f7DBb1FF2f54C7D',
@@ -194,7 +193,7 @@ function App() {
 				'0x6f4EE8BE7d684235175E38c8de351ab09F0c6544',
 				'0x72333CFEA680b5bD14d98Df11EEF3Bbad63E3EE9',
 				'0xD71c7Ec577f825Cc7e3d8ea57c5AB16adA3442d5'
-			];
+			];*/
 			const _provider = new ethers.providers.Web3Provider(ethereum);
 			setProvider(_provider);
 			var _setModal = setModal;
