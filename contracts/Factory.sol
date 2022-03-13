@@ -34,6 +34,7 @@ contract Factory{
        teams.push(team);
        count++;
        emit TeamCreated(address(team), msg.sender);
+       owner = payable(msg.sender);
        return address(team);
      }
      
